@@ -1,0 +1,1422 @@
+.mediaViewInfo {
+	--web-view-name: Home;
+	--web-view-id: Home;
+	--web-scale-on-resize: true;
+	--web-center-horizontally: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: Home;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#Home {
+	position: absolute;
+	transform: translateX(-50%);
+	left: 50%;
+	width: 1920px;
+	height: 5001px;
+	background-color: rgba(255,255,255,1);
+	overflow: hidden;
+	--web-view-name: Home;
+	--web-view-id: Home;
+	--web-scale-on-resize: true;
+	--web-center-horizontally: true;
+	--web-enable-deep-linking: true;
+}
+@keyframes fadein {
+
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+
+}
+#Footer {
+	position: absolute;
+	width: 1920px;
+	height: 390px;
+	left: 0px;
+	top: 4611px;
+	overflow: visible;
+}
+.Fundo_footer {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 390px;
+	left: 0px;
+	top: 0px;
+}
+#Texto_logo_footer {
+	opacity: 0.6;
+	position: absolute;
+	left: 405px;
+	top: 165px;
+	overflow: visible;
+	width: 256px;
+	height: 56px;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(255,255,255,1);
+}
+#email {
+	position: absolute;
+	left: 785px;
+	top: 115px;
+	overflow: visible;
+	width: 130px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(136,149,132,1);
+}
+#Telefone_footer {
+	position: absolute;
+	left: 785px;
+	top: 185px;
+	overflow: visible;
+	width: 117px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(136,149,132,1);
+}
+#Endereco_footer {
+	position: absolute;
+	left: 785px;
+	top: 255px;
+	overflow: visible;
+	width: 201px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(136,149,132,1);
+}
+#About_Careers_Servic {
+	position: absolute;
+	left: 1165px;
+	top: 85px;
+	overflow: visible;
+	width: 106px;
+	height: 187px;
+	line-height: 30px;
+	margin-top: -8px;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(255,255,255,1);
+}
+#logo {
+	position: absolute;
+	width: 255px;
+	height: 93px;
+	left: 405px;
+	top: 64px;
+	overflow: visible;
+}
+#Mediasocial {
+	position: absolute;
+	width: 190px;
+	height: 40px;
+	left: 1165px;
+	top: 290px;
+	overflow: visible;
+}
+#Oval {
+	opacity: 0.5;
+}
+.Oval {
+	position: absolute;
+	overflow: visible;
+	width: 41px;
+	height: 41px;
+	left: 0px;
+	top: 0px;
+}
+#facebook_f {
+	position: absolute;
+	width: 8.327px;
+	height: 16px;
+	left: 16.027px;
+	top: 12px;
+	overflow: visible;
+}
+.Path {
+	overflow: visible;
+	position: absolute;
+	width: 8.327px;
+	height: 16px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Oval_w {
+	opacity: 0.5;
+}
+.Oval_w {
+	position: absolute;
+	overflow: visible;
+	width: 41px;
+	height: 41px;
+	left: 50px;
+	top: 0px;
+}
+#twitter {
+	position: absolute;
+	width: 16.625px;
+	height: 13.995px;
+	left: 62px;
+	top: 13.003px;
+	overflow: visible;
+}
+.Path_y {
+	overflow: visible;
+	position: absolute;
+	width: 16.625px;
+	height: 13.995px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Oval_z {
+	opacity: 0.5;
+}
+.Oval_z {
+	position: absolute;
+	overflow: visible;
+	width: 41px;
+	height: 41px;
+	left: 100px;
+	top: 0px;
+}
+#instagram {
+	position: absolute;
+	width: 15.938px;
+	height: 15.97px;
+	left: 112.033px;
+	top: 12.029px;
+	overflow: visible;
+}
+.Shape {
+	overflow: visible;
+	position: absolute;
+	width: 15.938px;
+	height: 15.97px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Oval_ {
+	opacity: 0.5;
+}
+.Oval_ {
+	position: absolute;
+	overflow: visible;
+	width: 41px;
+	height: 41px;
+	left: 150px;
+	top: 0px;
+}
+#youtube {
+	position: absolute;
+	width: 18.954px;
+	height: 14px;
+	left: 160.032px;
+	top: 13px;
+	overflow: visible;
+}
+.Shape_ {
+	overflow: visible;
+	position: absolute;
+	width: 18.954px;
+	height: 14px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#testemunhos {
+	position: absolute;
+	width: 1920px;
+	height: 821px;
+	left: 0px;
+	top: 3786px;
+	overflow: visible;
+}
+.Rectangle {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 821px;
+	left: 0px;
+	top: 0px;
+}
+#Titulo_testemunhos {
+	position: absolute;
+	left: 405px;
+	top: 78px;
+	overflow: visible;
+	width: 355px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 60px;
+	color: rgba(37,41,36,1);
+}
+#testimonial {
+	position: absolute;
+	width: 1920px;
+	height: 668px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#text {
+	position: absolute;
+	width: 254px;
+	height: 46px;
+	left: 501.5px;
+	top: 612.519px;
+	overflow: visible;
+}
+#Text_nomepessoa {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 255px;
+	height: 19px;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	color: rgba(37,41,36,1);
+}
+#Text_pessoa1 {
+	position: absolute;
+	left: 0px;
+	top: 27px;
+	overflow: visible;
+	width: 255px;
+	height: 19px;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	color: rgba(37,41,36,1);
+}
+.Rectangle_bc {
+	position: absolute;
+	overflow: visible;
+	width: 350px;
+	height: 350px;
+	left: 405px;
+	top: 223px;
+}
+#_ {
+	position: absolute;
+	left: 425px;
+	top: 209px;
+	overflow: hidden;
+	width: 42px;
+	height: 80px;
+	text-align: left;
+	font-family: Playfair Display;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 130px;
+	color: rgba(136,149,132,1);
+}
+#Text_testemunho {
+	position: absolute;
+	left: 435px;
+	top: 325px;
+	overflow: visible;
+	width: 526px;
+	height: 230px;
+	line-height: 50px;
+	margin-top: -10px;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	color: rgba(66,66,66,1);
+}
+#image {
+	position: absolute;
+	width: 65px;
+	height: 65px;
+	left: 405px;
+	top: 603px;
+	overflow: visible;
+}
+.Oval_bg {
+	position: absolute;
+	overflow: visible;
+	width: 65px;
+	height: 65px;
+	left: 0px;
+	top: 0px;
+}
+#Ret_ngulo_1 {
+	opacity: 0.5;
+}
+.Ret_ngulo_1 {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 25px;
+	left: 0px;
+	top: 0px;
+}
+#testimonial_bi {
+	position: absolute;
+	width: 555px;
+	height: 459px;
+	left: 975px;
+	top: 209px;
+	overflow: visible;
+}
+#text_bj {
+	position: absolute;
+	width: 254px;
+	height: 46px;
+	left: 96.5px;
+	top: 403.519px;
+	overflow: visible;
+}
+#Text_nomepessoa_bk {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 255px;
+	height: 19px;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	color: rgba(37,41,36,1);
+}
+#Text_pessoa1_bl {
+	position: absolute;
+	left: 0px;
+	top: 27px;
+	overflow: visible;
+	width: 255px;
+	height: 19px;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	color: rgba(37,41,36,1);
+}
+.Rectangle_bm {
+	position: absolute;
+	overflow: visible;
+	width: 350px;
+	height: 350px;
+	left: 0px;
+	top: 14px;
+}
+#__bn {
+	position: absolute;
+	left: 20px;
+	top: 0px;
+	overflow: hidden;
+	width: 42px;
+	height: 80px;
+	text-align: left;
+	font-family: Playfair Display;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 130px;
+	color: rgba(136,149,132,1);
+}
+#Text_testemunho_bo {
+	position: absolute;
+	left: 30px;
+	top: 116px;
+	overflow: visible;
+	width: 526px;
+	height: 230px;
+	line-height: 50px;
+	margin-top: -10px;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	color: rgba(66,66,66,1);
+}
+#image_bp {
+	position: absolute;
+	width: 65px;
+	height: 65px;
+	left: 0px;
+	top: 394px;
+	overflow: visible;
+}
+.Oval_bq {
+	position: absolute;
+	overflow: visible;
+	width: 65px;
+	height: 65px;
+	left: 0px;
+	top: 0px;
+}
+#FundoHeader {
+	position: absolute;
+	width: 1920px;
+	height: 801px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#cases {
+	position: absolute;
+	width: 1110px;
+	height: 1110px;
+	left: 405px;
+	top: 2567px;
+	overflow: visible;
+}
+#Titulo_case {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 439px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 60px;
+	color: rgba(37,41,36,1);
+}
+#Text_case {
+	opacity: 0.6;
+	position: absolute;
+	left: 0px;
+	top: 104px;
+	overflow: visible;
+	width: 556px;
+	height: 98px;
+	line-height: 28px;
+	margin-top: -4px;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 20px;
+	color: rgba(66,66,66,1);
+}
+#Casevejamais {
+	position: absolute;
+	left: 0px;
+	top: 240px;
+	overflow: visible;
+	width: 112px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(66,66,66,1);
+}
+#Arrow {
+	position: absolute;
+	width: 21.583px;
+	height: 14px;
+	left: 117px;
+	top: 246px;
+	overflow: visible;
+}
+.Path_2 {
+	overflow: visible;
+	position: absolute;
+	width: 8.66px;
+	height: 14.735px;
+	left: 14px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_3 {
+	overflow: visible;
+	position: absolute;
+	width: 21.583px;
+	height: 1px;
+	left: 0px;
+	top: 7px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#image_bz {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	left: 0px;
+	top: 760px;
+	overflow: visible;
+}
+#case_img6 {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#image_b {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#image_ca {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	left: 380px;
+	top: 380px;
+	overflow: visible;
+}
+#case_img5 {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#image_cb {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#image_cc {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	left: 760px;
+	top: 380px;
+	overflow: visible;
+}
+#case_img12 {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#image_cd {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#image_ce {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	left: 380px;
+	top: 760px;
+	overflow: visible;
+}
+#case_img4 {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#image_cf {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#image_cg {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	left: 760px;
+	top: 760px;
+	overflow: visible;
+}
+#case_img3 {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#image_ch {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#image_cj {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	left: 760px;
+	top: 0px;
+	overflow: visible;
+}
+#case_img1 {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#image_cl {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#DetalheSkill {
+	position: absolute;
+	width: 1110px;
+	height: 943px;
+	left: 405px;
+	top: 1395px;
+	overflow: visible;
+}
+#Box_det_skill {
+	position: absolute;
+	width: 790px;
+	height: 231px;
+	left: 160px;
+	top: 213px;
+	overflow: visible;
+}
+#Titulo_detskill {
+	position: absolute;
+	left: 110px;
+	top: 0px;
+	overflow: visible;
+	width: 571px;
+	height: 104px;
+	text-align: center;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 44px;
+	color: rgba(37,41,36,1);
+}
+#Text_Det_skill {
+	opacity: 0.6;
+	position: absolute;
+	left: 0px;
+	top: 158px;
+	overflow: visible;
+	width: 791px;
+	height: 73px;
+	line-height: 28px;
+	margin-top: -4px;
+	text-align: center;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 20px;
+	color: rgba(66,66,66,1);
+}
+#Det_skill_Text_right {
+	opacity: 0.6;
+	position: absolute;
+	left: 855px;
+	top: 585px;
+	overflow: visible;
+	width: 256px;
+	height: 44px;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 18px;
+	color: rgba(37,41,36,1);
+}
+#Det_SkillTipo5 {
+	position: absolute;
+	left: 855px;
+	top: 552px;
+	overflow: visible;
+	width: 76px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(37,41,36,1);
+}
+#Det_skill_Text_left {
+	opacity: 0.6;
+	position: absolute;
+	left: 0px;
+	top: 585px;
+	overflow: visible;
+	width: 256px;
+	height: 44px;
+	text-align: right;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 18px;
+	color: rgba(37,41,36,1);
+}
+#Det_SkillTipo4 {
+	position: absolute;
+	left: 180px;
+	top: 552px;
+	overflow: visible;
+	width: 76px;
+	white-space: nowrap;
+	text-align: right;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(37,41,36,1);
+}
+#Det_skill_Text_right_cv {
+	opacity: 0.6;
+	position: absolute;
+	left: 855px;
+	top: 742px;
+	overflow: visible;
+	width: 256px;
+	height: 44px;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 18px;
+	color: rgba(37,41,36,1);
+}
+#Det_SkillTipo3 {
+	position: absolute;
+	left: 855px;
+	top: 709px;
+	overflow: visible;
+	width: 76px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(37,41,36,1);
+}
+#Det_skill_Text_left_cx {
+	opacity: 0.6;
+	position: absolute;
+	left: 0px;
+	top: 742px;
+	overflow: visible;
+	width: 256px;
+	height: 44px;
+	text-align: right;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 18px;
+	color: rgba(37,41,36,1);
+}
+#Det_SkillTipo2 {
+	position: absolute;
+	left: 180px;
+	top: 709px;
+	overflow: visible;
+	width: 76px;
+	white-space: nowrap;
+	text-align: right;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(37,41,36,1);
+}
+#Det_skill_Text_right_cz {
+	opacity: 0.6;
+	position: absolute;
+	left: 855px;
+	top: 899px;
+	overflow: visible;
+	width: 256px;
+	height: 44px;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 18px;
+	color: rgba(37,41,36,1);
+}
+#Det_SkillTipo1 {
+	position: absolute;
+	left: 855px;
+	top: 866px;
+	overflow: visible;
+	width: 76px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(37,41,36,1);
+}
+#Det_skill_Text_left_c {
+	opacity: 0.6;
+	position: absolute;
+	left: 0px;
+	top: 899px;
+	overflow: visible;
+	width: 256px;
+	height: 44px;
+	text-align: right;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 18px;
+	color: rgba(37,41,36,1);
+}
+#Type_II {
+	position: absolute;
+	left: 180px;
+	top: 866px;
+	overflow: visible;
+	width: 76px;
+	white-space: nowrap;
+	text-align: right;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(37,41,36,1);
+}
+#Separador {
+	position: absolute;
+	width: 160px;
+	height: 138px;
+	left: 475px;
+	top: 0px;
+	overflow: visible;
+}
+#principalsill {
+	position: absolute;
+	width: 1110px;
+	height: 158px;
+	left: 405px;
+	top: 1160px;
+	overflow: visible;
+}
+#Ttitulo_skill {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 351px;
+	height: 156px;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 44px;
+	color: rgba(37,41,36,1);
+}
+#Text_skill {
+	opacity: 0.6;
+	position: absolute;
+	left: 380px;
+	top: 2px;
+	overflow: visible;
+	width: 351px;
+	height: 156px;
+	line-height: 28px;
+	margin-top: -4px;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 20px;
+	color: rgba(66,66,66,1);
+}
+#Text_skill2 {
+	opacity: 0.6;
+	position: absolute;
+	left: 760px;
+	top: 2px;
+	overflow: visible;
+	width: 351px;
+	height: 156px;
+	line-height: 28px;
+	margin-top: -4px;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 20px;
+	color: rgba(66,66,66,1);
+}
+#Chamada1 {
+	position: absolute;
+	width: 1110px;
+	height: 200px;
+	left: 405px;
+	top: 880px;
+	overflow: visible;
+}
+#Detalhe {
+	position: absolute;
+	width: 1110px;
+	height: 200px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Rectangle_da {
+	overflow: visible;
+	position: absolute;
+	width: 1110px;
+	height: 200px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Titulo_qualidade {
+	position: absolute;
+	left: 43px;
+	top: 44px;
+	overflow: visible;
+	width: 266px;
+	height: 29px;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	color: rgba(37,41,36,1);
+}
+#Texto_qualidade {
+	opacity: 0.6;
+	position: absolute;
+	left: 43px;
+	top: 87px;
+	overflow: visible;
+	width: 266px;
+	height: 69px;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 18px;
+	color: rgba(66,66,66,1);
+}
+#Titulo_qualidade2 {
+	position: absolute;
+	left: 423px;
+	top: 44px;
+	overflow: visible;
+	width: 266px;
+	height: 29px;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	color: rgba(37,41,36,1);
+}
+#Texto_qualidade2 {
+	opacity: 0.6;
+	position: absolute;
+	left: 423px;
+	top: 87px;
+	overflow: visible;
+	width: 266px;
+	height: 69px;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 18px;
+	color: rgba(66,66,66,1);
+}
+#Titulo_qualidade3 {
+	position: absolute;
+	left: 803px;
+	top: 44px;
+	overflow: visible;
+	width: 266px;
+	height: 29px;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	color: rgba(37,41,36,1);
+}
+#Texto_qualidade3 {
+	opacity: 0.6;
+	position: absolute;
+	left: 803px;
+	top: 87px;
+	overflow: visible;
+	width: 266px;
+	height: 69px;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 18px;
+	color: rgba(66,66,66,1);
+}
+#Header {
+	position: absolute;
+	width: 1111px;
+	height: 427px;
+	left: 405px;
+	top: 82px;
+	overflow: visible;
+}
+#email_di {
+	position: absolute;
+	left: 285px;
+	top: 0px;
+	overflow: visible;
+	width: 134px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(255,255,255,1);
+}
+#fone {
+	position: absolute;
+	left: 994px;
+	top: 0px;
+	overflow: visible;
+	width: 117px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(255,255,255,1);
+}
+#Line {
+	opacity: 0.3;
+}
+.Line {
+	overflow: visible;
+	position: absolute;
+	width: 826px;
+	height: 1px;
+	left: 285.5px;
+	top: 49.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Menu {
+	position: absolute;
+	width: 1111px;
+	height: 82px;
+	left: 0px;
+	top: 37px;
+	overflow: visible;
+}
+#SocialButons {
+	position: absolute;
+	width: 190px;
+	height: 40px;
+	left: 921px;
+	top: 42px;
+	overflow: visible;
+}
+#Oval_dn {
+	opacity: 0.5;
+}
+.Oval_dn {
+	position: absolute;
+	overflow: visible;
+	width: 41px;
+	height: 41px;
+	left: 0px;
+	top: 0px;
+}
+#facebook_f_do {
+	position: absolute;
+	width: 8.327px;
+	height: 16px;
+	left: 16.027px;
+	top: 12px;
+	overflow: visible;
+}
+.Path_dp {
+	overflow: visible;
+	position: absolute;
+	width: 8.327px;
+	height: 16px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Oval_dq {
+	opacity: 0.5;
+}
+.Oval_dq {
+	position: absolute;
+	overflow: visible;
+	width: 41px;
+	height: 41px;
+	left: 50px;
+	top: 0px;
+}
+#twitter_dr {
+	position: absolute;
+	width: 16.625px;
+	height: 13.995px;
+	left: 62px;
+	top: 13.003px;
+	overflow: visible;
+}
+.Path_ds {
+	overflow: visible;
+	position: absolute;
+	width: 16.625px;
+	height: 13.995px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Oval_dt {
+	opacity: 0.5;
+}
+.Oval_dt {
+	position: absolute;
+	overflow: visible;
+	width: 41px;
+	height: 41px;
+	left: 100px;
+	top: 0px;
+}
+#instagram_du {
+	position: absolute;
+	width: 15.938px;
+	height: 15.97px;
+	left: 112.033px;
+	top: 12.029px;
+	overflow: visible;
+}
+.Shape_dv {
+	overflow: visible;
+	position: absolute;
+	width: 15.938px;
+	height: 15.969px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Oval_dw {
+	opacity: 0.5;
+}
+.Oval_dw {
+	position: absolute;
+	overflow: visible;
+	width: 41px;
+	height: 41px;
+	left: 150px;
+	top: 0px;
+}
+#youtube_dx {
+	position: absolute;
+	width: 18.954px;
+	height: 14px;
+	left: 160.032px;
+	top: 13px;
+	overflow: visible;
+}
+.Shape_dy {
+	overflow: visible;
+	position: absolute;
+	width: 18.954px;
+	height: 14px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Home_dz {
+	position: absolute;
+	left: 285px;
+	top: 51px;
+	overflow: visible;
+	width: 49px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(255,255,255,1);
+}
+#UnoLoco {
+	position: absolute;
+	left: 392px;
+	top: 51px;
+	overflow: visible;
+	width: 71px;
+	white-space: nowrap;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: UnoLoco.html;
+	cursor: pointer;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(255,255,255,1);
+}
+#Consultoria {
+	position: absolute;
+	left: 521px;
+	top: 51px;
+	overflow: visible;
+	width: 67px;
+	white-space: nowrap;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: Servicos.html;
+	cursor: pointer;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(255,255,255,1);
+}
+#Blog {
+	position: absolute;
+	left: 646px;
+	top: 51px;
+	overflow: visible;
+	width: 65px;
+	white-space: nowrap;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: Not_cias.html;
+	cursor: pointer;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(255,255,255,1);
+}
+#Fale_Conosco {
+	position: absolute;
+	left: 769px;
+	top: 51px;
+	overflow: visible;
+	width: 103px;
+	white-space: nowrap;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: Fale_Conosco.html;
+	cursor: pointer;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(255,255,255,1);
+}
+#logo_d {
+	position: absolute;
+	width: 255px;
+	height: 82px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#Exclusive {
+	position: absolute;
+	left: 0px;
+	top: 213px;
+	overflow: visible;
+	width: 556px;
+	height: 96px;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 80px;
+	color: rgba(248,248,248,1);
+}
+#Texto_chamada {
+	position: absolute;
+	left: 0px;
+	top: 331px;
+	overflow: visible;
+	width: 446px;
+	height: 96px;
+	line-height: 28px;
+	margin-top: -4px;
+	text-align: left;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
