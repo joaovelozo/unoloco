@@ -5,7 +5,7 @@
 
 
 <div class="row mb-5">
-    @foreach( $postsFeatured as $featured )
+    @foreach( $posts_featured as $featured )
     <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 post-entry">
     <a href="{{url("/posts/{$featured->url}")}}" class="d-block figure">
         <img src="images/img_1.jpg" alt="Image" class="img-fluid">

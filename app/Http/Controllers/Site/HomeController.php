@@ -25,9 +25,9 @@ class HomeController extends Controller
 
  
     {
-        $postsFeatured = $this->post->where('featured', true)->get();
+        $posts_featured = $this->post->where('featured', true)->get();
 
-        return view('site.home.index', compact('postsFeatured'));
+        return view('site.home.index', compact('posts_featured'));
     }
 
     /**
