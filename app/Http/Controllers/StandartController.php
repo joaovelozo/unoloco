@@ -148,6 +148,7 @@ class StandartController extends BaseController
 
             } else {
                 $nameImage = $data->image;
+                $dataForm[$this->upload['name']] = $data->image;
             }
                 $upload = $image->storeAs($this->upload['path'], $nameImage);
 

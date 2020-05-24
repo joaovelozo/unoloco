@@ -28,52 +28,10 @@
   
           
         </div>
-        <div class="col-lg-4">
+
          
   
-          <div class="mb-5">
-            <h3 class="footer-heading mb-4">Últimos Posts</h3>
-            <div class="block-25">
-              <ul class="list-unstyled">
-                <li class="mb-3">
-                  <a href="#" class="d-flex">
-                    <figure class="image mr-4">
-                      <img src="images/hero_bg_1.jpg" alt="" class="img-fluid">
-                    </figure>
-                    <div class="text">
-                      <span class="small text-uppercase date">Sep 16, 2018</span>
-                      <h3 class="heading font-weight-light">Lorem ipsum dolor sit amet consectetur elit</h3>
-                    </div>
-                  </a>
-                </li>
-                <li class="mb-3">
-                  <a href="#" class="d-flex">
-                    <figure class="image mr-4">
-                      <img src="images/hero_bg_1.jpg" alt="" class="img-fluid">
-                    </figure>
-                    <div class="text">
-                      <span class="small text-uppercase date">Sep 16, 2018</span>
-                      <h3 class="heading font-weight-light">Lorem ipsum dolor sit amet consectetur elit</h3>
-                    </div>
-                  </a>
-                </li>
-                <li class="mb-3">
-                  <a href="#" class="d-flex">
-                    <figure class="image mr-4">
-                      <img src="images/hero_bg_1.jpg" alt="" class="img-fluid">
-                    </figure>
-                    <div class="text">
-                      <span class="small text-uppercase date">Sep 16, 2018</span>
-                      <h3 class="heading font-weight-light">Lorem ipsum dolor sit amet consectetur elit</h3>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          
-        </div>
-        
+
   
         <div class="col-lg-4 mb-5 mb-lg-0">
   

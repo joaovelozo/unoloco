@@ -90,23 +90,29 @@
 
           <div class="row form-group">
             <div class="col-md-12 mb-3 mb-md-0">
+              {!! Form::open(['route' => 'contact', 'class' => 'form form-contact']) !!}
               <label class="font-weight-bold" for="fullname">Nome Completo</label>
-              <input type="text" id="fullname" class="form-control" placeholder="Nome Completo">
+              {!! Form::text('name', null, ['class' => 'form-control']) !!}
             </div>
           </div>
           <div class="row form-group">
             <div class="col-md-12">
               <label class="font-weight-bold" for="email">Email</label>
-              <input type="email" id="email" class="form-control" placeholder="Email">
+              {!! Form::email('email', null, ['class' => 'form-control']) !!}
             </div>
           </div>
-
+          <div class="row form-group">
+            <div class="col-md-12">
+              <label class="font-weight-bold" for="email">Assunto</label>
+              {!! Form::text('subject', null, ['class' => 'form-control']) !!}
+            </div>
+          </div>
           
 
           <div class="row form-group">
             <div class="col-md-12">
               <label class="font-weight-bold" for="message">Mensagem</label> 
-              <textarea name="message" id="message" cols="30" rows="5" class="form-control" placeholder="Digite sua solicitação aqui"></textarea>
+              {!! Form::textarea('message', null, ['class' => 'form-control']) !!}
             </div>
           </div>
 
@@ -114,6 +120,7 @@
             <div class="col-md-12">
               <input type="submit" value="Enviar" class="btn btn-primary rounded-0 btn-lg">
             </div>
+            {!! Form::close() !!}
           </div>
 
 

@@ -175,7 +175,7 @@
                       </div>
                   </div>
               </div>
-          </div>>
+          </div>
       </section>
 
      <!--end-title-->
@@ -194,14 +194,26 @@
         <h2 class="font-weight-bold text-black mb-5">Informativos</h2>
       </div>
     </div>
-      @yield('content')
+    <div class="row mb-5">
+      @foreach( $postsFeatured as $featured )
+      <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 post-entry">
+      <a href="{{url("/posts/{$featured->url}")}}" class="d-block figure">
+          <img src="{{url("assets/uploads/posts/{$featured->image}")}}" alt="Image" class="img-fluid">
+        </a>
+        <span class="text-muted d-block mb-2">{{$featured->created_at}}</span>
+        <h3><a href="#">{{$featured->title}} </a></h3>
+      </div>
+      @endforeach
+    </div>
+  </div>
+
     <div class="row mt-5 text-center">
       <div class="col-12">
         <p><a href="{{url('blog')}}" class="btn btn-primary btn-lg rounded-0">Todas as Postagens</a></p>
       </div>
     </div>
   </div>
-  
+
 </div>
 
 
@@ -264,23 +276,29 @@
 
           <div class="row form-group">
             <div class="col-md-12 mb-3 mb-md-0">
+              {!! Form::open(['route' => 'contact', 'class' => 'form form-contact']) !!}
               <label class="font-weight-bold" for="fullname">Nome Completo</label>
-              <input type="text" id="fullname" class="form-control" placeholder="Nome Completo">
+              {!! Form::text('name', null, ['class' => 'form-control']) !!}
             </div>
           </div>
           <div class="row form-group">
             <div class="col-md-12">
               <label class="font-weight-bold" for="email">Email</label>
-              <input type="email" id="email" class="form-control" placeholder="Email">
+              {!! Form::email('email', null, ['class' => 'form-control']) !!}
             </div>
           </div>
-
+          <div class="row form-group">
+            <div class="col-md-12">
+              <label class="font-weight-bold" for="email">Assunto</label>
+              {!! Form::text('subject', null, ['class' => 'form-control']) !!}
+            </div>
+          </div>
           
 
           <div class="row form-group">
             <div class="col-md-12">
               <label class="font-weight-bold" for="message">Mensagem</label> 
-              <textarea name="message" id="message" cols="30" rows="5" class="form-control" placeholder="Digite sua solicitação aqui"></textarea>
+              {!! Form::textarea('message', null, ['class' => 'form-control']) !!}
             </div>
           </div>
 
@@ -288,6 +306,7 @@
             <div class="col-md-12">
               <input type="submit" value="Enviar" class="btn btn-primary rounded-0 btn-lg">
             </div>
+            {!! Form::close() !!}
           </div>
 
 

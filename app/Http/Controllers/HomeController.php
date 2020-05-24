@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
+use App\User;
+use App\Models\Pagina;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $totalUser =  User::count();
+        $totalPost = Post::count();
+        $totalPagina  = Pagina::count();
+
+        return view('admin.dashboard.index', compact('totalUser','totalPost', 'totalPagina'));
     }
 }

@@ -1,23 +1,57 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+@section('content_header')
+    <h3>Dashboard</h3>
+@stop
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+@section('content')
+<section class="content">
+    <!-- Small boxes (Stat box) -->
+    <div class="row">
+      <div class="col-lg-3 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-aqua">   
+          <div class="inner">
+          <h3>{{$totalPost}}</h3>
 
-                    You are logged in!
-                </div>
-            </div>
+            <p>Informativos</p>
+          </div>
+          <div class="icon">
+            <i class="fas fa-blog"></i>
+          </div>
+        <a href="{{url('admin/anunciantes')}}" class="small-box-footer">Mais Informações <i class=" fa fa-arrow-circle-right"></i></a>
         </div>
-    </div>
-</div>
+      </div>
+      <!-- ./col -->
+      <div class="col-lg-3 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-red">
+          <div class="inner">
+          <h3>{{$totalPagina}}</h3>
+
+            <p>Páginas</p>
+          </div>
+          <div class="icon">
+            <i class=" fas fa-sitemap"></i>
+          </div>
+        <a href="{{url('admin/categorias')}}" class="small-box-footer">Mais Informações <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+      </div>
+     
+      <!-- ./col -->
+      <div class="col-lg-3 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-yellow">
+          <div class="inner">
+          <h3>{{$totalUser}}</h3>
+
+            <p>Usuários</p>
+          </div>
+          <div class="icon">
+            <i class="fas fa-user"></i>
+          </div>
+        <a href="{{url('admin/users')}}" class="small-box-footer">Mais Informações <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+      </div>
 @endsection

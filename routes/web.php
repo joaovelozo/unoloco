@@ -31,7 +31,7 @@ Route::resource('/posts', 'Admin\PostController');
   * Rotas Site
   ***************************************************************/
 
-Route::resource('index', 'Site\HomeController');
+Route::resource('/', 'Site\HomeController');
 Route::resource('about', 'Site\AboutController');
 Route::get('contact', 'Site\ContactController@index');
 Route::resource('valuation', 'Site\ValuationController');
@@ -40,6 +40,8 @@ Route::resource('consult', 'Site\ConsultController');
 Route::resource('juridic', 'Site\AcessoriajController');
 Route::resource('suport', 'Site\AcessoriacController');
 Route::resource('blog', 'Site\BlogController');
+Route::get('/categoria/{url}', 'Site\HomeController@category');
+Route::post('contact', 'Site\HomeController@sendcontact')->name('contact');
 
 
 
@@ -56,9 +58,6 @@ Route::resource('blog', 'Site\BlogController');
 |
 */
 
-Route::get('/', function () {
-    return view('site.home.index');
-});
 
 Auth::routes();
 

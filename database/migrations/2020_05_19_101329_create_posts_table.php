@@ -15,18 +15,18 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('title', 250);
+
+            $table->string('title', 250)->unique();
             $table->text('description');
-            $table->string('url', 100);
+            $table->string('url', 100)->unique();
+            $table->string('image', 250)->nullable();
             $table->date('date')->nullable();
             $table->time('hour')->nullable();
             $table->boolean('featured')->default(false);
             $table->string('slug');
-
-            $table->bigInteger('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            
             $table->timestamps();
+
+          
         });
     }
 

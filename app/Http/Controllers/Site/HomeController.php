@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Site;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\Categoria;
+use Mail;
+use App\Mail\SendContact;
 
 class HomeController extends Controller
 {
@@ -21,13 +24,22 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Categoria $categoria)
 
  
     {
-        $posts_featured = $this->post->where('featured', true)->get();
+      
+         
+            $postsFeatured = $this->post
+            ->where('featured', true)
+            ->limit(3)
+            ->get();
+            
+            $categorias = $categoria->all();
 
-        return view('site.home.index', compact('posts_featured'));
+            return view('site.home.index', compact('postsFeatured', 'categorias'));
+
+  
     }
 
     /**
@@ -94,5 +106,30 @@ class HomeController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function category(Categoria $categoria, $url)
+
+    {
+        $categoria =  $categoria
+            ->where('url', $url)
+            ->get()
+            ->first();
+
+            $posts = $categoria->posts()->get();
+
+            return view('site.category.category', compact('categoria', 'posts'));
+
+        
+    }
+
+    public function sendContact(Request $request)
+
+    {
+        $dataForm = $request->all();
+
+        $mail = Mail::send(new SendContact($dataForm));
+
+        dd($mail);
     }
 }

@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
+use Illuminate\Str;
 
 class Post extends Model
 {
@@ -13,13 +14,15 @@ class Post extends Model
     protected $fillable = [
         'title', 
         'url',
+        'image',
         'description',
         'user_id', 
         'categoria_id',
         'date', 
         'hour', 
         'featured', 
-        'slug'];
+        'slug'
+    ];
 
     public function getSlugOptions() : SlugOptions
     {
@@ -28,16 +31,23 @@ class Post extends Model
             ->saveSlugsTo('slug');
     }
 
-    public function rules()
+    public function rules($id = '')
     {
         return  [
-            'title' => 'required|min:3|max:250', 
-            'description' => 'required|min:50|max:1000',
+            'title' => "required|min:3|max:250, unique:posts,title,{$id}, id", 
+            'url' => "required|min:3|max:100, unique:posts,url,{$id}, id",
+            'description' => 'required|min:50|max:11000',
             'categorias_id' => 'required',
             'date' => 'required|date', 
             'hour' => 'required', 
+            'image' =>"image",
            
         ];
     }
+    //public function getDescriptionCutAttibute($value)
+
+   // {
+       // return Str::limit($value, 100);;
+   // }
 
 }

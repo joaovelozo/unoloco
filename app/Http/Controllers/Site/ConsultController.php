@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Categoria;
 
 class ConsultController extends Controller
 {
@@ -12,9 +13,12 @@ class ConsultController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Categoria $categoria)
     {
-        return view('site.consult.index');
+
+        $categorias = $categoria->all();
+
+        return view('site.consult.index', compact('categorias'));
     }
 
     /**

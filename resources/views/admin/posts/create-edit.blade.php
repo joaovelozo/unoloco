@@ -26,10 +26,11 @@
     {!! Form::text('title', null, ['class'=>'form-control form-control-lg', 'placeholder' => 'Título:']) !!}
     </div>
 
+
     <div class="form-group">
         <label>Selecione a Categoria</label>
         {!! Form::select('categorias_id', $categorias, null, ['class'=>'form-control form-control-lg']) !!}
-        </div>
+    </div>
 
     <div class="form-group">
         <label>Agendar Data</label>
@@ -42,7 +43,7 @@
     </div>
 
     <div class="form-group">
-        <label>Destacar?</label>
+        <label>Colocar em Destacar?</label>
         {!! Form::checkbox('featured', null) !!}
     </div>
 
@@ -50,9 +51,14 @@
     <div class="form-group">
     {!! Form::text('url', null, ['class'=>'form-control form-control-lg', 'placeholder' => 'URL:'])!!}
     </div>
+    
     <div clas="form-group">
         {!! Form::textarea('description', null, ['class'=>'form-control form-control-lg', 'placeholder' => 'Descrição:'])!!}
     </div>
+
+    <div class="form-group">
+        {!! Form::file('image', ['class'=>'form-control form-control-lg']) !!}
+        </div>
 
     <div class="form-group">
         <div class=text-right>

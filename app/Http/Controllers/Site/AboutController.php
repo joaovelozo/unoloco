@@ -4,11 +4,15 @@ namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Categoria;
 
 class AboutController extends Controller
 {
-    public function index()
+    public function index(Categoria $categoria)
     {
-        return view('site.about.index');
+
+        $categorias = $categoria->all();
+
+        return view('site.about.index', compact('categorias'));
     }
 }

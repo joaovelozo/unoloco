@@ -11,13 +11,13 @@
         </div>
         <div class="col-6">
           <div class="d-flex ml-auto">
-            <a href="#" class="d-flex align-items-center ml-auto mr-4">
-              <span class="icon-phone mr-2"></span>
-              <span class="d-none d-md-inline-block">contato@unoloco.com.br</span>
+            <a href="https://api.whatsapp.com/send?phone=5561983780177&text=Seja%20bem%20vindo%20a%20Unoloco%2C%20como%20podemos%20te%20ajudar%3F" target="_blank" class="d-flex align-items-center ml-auto mr-4">
+              <span class="icon-whatsapp mr-2"></span>
+              <span class="d-none d-md-inline-block">+55 61 983780177</span>
             </a>
             <a href="#" class="d-flex align-items-center">
               <span class="icon-envelope mr-2"></span>
-              <span class="d-none d-md-inline-block">+55 61 983780177</span>
+              <span class="d-none d-md-inline-block">contato@unoloco.com.br</span>
             </a>
           </div>
         </div>
@@ -39,7 +39,7 @@
 
               <ul class="site-menu js-clone-nav d-none d-lg-block">
                 
-                  <a href="{{url('index')}}">Home</a>
+                  <a href="{{url('/')}}">Home</a>
                 <li><a href="{{url('about')}}">Unoloco</a></li>
                 <li class="has-children">
                   <a href="{{url('services')}}">Serviços</a>
@@ -51,7 +51,15 @@
                   <li><a href="{{url('valuation')}}">Valuation</a></li>
                   </ul>
                 </li>
-                <li><a href="{{url('blog')}}">Notícias</a></li>
+                <li class="has-children">
+                  <a href="{{url('blog')}}">Informativos</a>
+                  <ul class="dropdown arrow-top">
+                   @foreach ($categorias as $categoria)
+                  <li><a href="{{url("/categoria/{$categoria->url}")}}">{{$categoria->name}}</a></li>
+                  @endforeach
+                  
+                  </ul>
+                </li>
                 <li><a href="{{url('contact')}}">Fale Conosco</a></li>
               </ul>
             </div>

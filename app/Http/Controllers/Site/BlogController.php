@@ -4,17 +4,34 @@ namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use App\Models\Categoria;
+use App\Models\Post;
+use Illuminate\Support\Str;
 class BlogController extends Controller
 {
+
+    public function __construct(Post $post)
+    {
+        $this->post = $post;
+    }
+
+    public function getDescriptionCutAttibute($value)
+
+    {
+        return Str::limit($value, 100);
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Categoria $categoria)
     {
-        return view('site.blog.index');
+        $categorias = $categoria->all();
+
+        $posts = $this->post->orderBy('date','DESC')->paginate(8);
+
+        return view('site.blog.index', compact('categorias', 'posts'));
     }
 
     /**

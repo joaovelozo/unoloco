@@ -15,6 +15,7 @@ class PostController extends StandartController
     protected $name = 'Post';
     protected $view = 'admin.posts';
     protected $route = 'posts';
+    protected $upload = ['name' => 'image', 'path' => 'posts'];
 
 
     
@@ -38,6 +39,7 @@ class PostController extends StandartController
         $title = "Editar {$this->name}: {$data->name}";
 
         $categorias = Categoria::get()->pluck('name', 'id');
+       
 
         return view("{$this->view}.create-edit", compact('data', 'title', 'categorias'));
     }
@@ -59,20 +61,39 @@ class PostController extends StandartController
 
         $dataForm['user_id'] = auth()->user()->id;
 
+        if ($this->upload && $request->hasFile($this->upload['name'])) {
+
+            $image = $request->file($this->upload['name']);
+
+            $nameFile = uniqid(date('YmdHis')) . '.' . $image->getClientOriginalExtension();
+
+           
+                $upload = $image->storeAs($this->upload['path'], $nameFile);
+
+                if($upload)
+                    $dataForm[$this->upload['name']] = $nameFile;
+
+                    else
+                        return redirect()
+                            ->route("{$this->route}.create")
+                            ->withErrors(['errors' => 'Erro no Upload'])
+                            ->whithInput();
+        }
+
   
 
         // Cadastra o novo usuário
         $insert = $this->model->create($dataForm);
 
         if($insert)
-        return redirect()
-        ->route("{$this->route}.index")
-        ->with(['sucess'=> 'Cadastro Realizado com Sucesso']);
-        else
-        return redirect()
-        ->route("{$this->route}.create")
-        ->withErrors(['errors'=>'Falha ao Cadastrar'])
-        ->withInput();
+                return redirect()
+                        ->route("{$this->route}.index")
+                        ->with(['sucess'=> 'Cadastro Realizado com Sucesso']);
+                else
+                return redirect()
+                        ->route("{$this->route}.create")
+                        ->withErrors(['errors'=>'Falha ao Cadastrar'])
+                        ->withInput();
     }
 
     public function update(Request $request, $id)

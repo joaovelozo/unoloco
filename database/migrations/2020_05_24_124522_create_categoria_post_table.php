@@ -14,13 +14,11 @@ class CreateCategoriaPostTable extends Migration
     public function up()
     {
         Schema::create('categoria_post', function (Blueprint $table) {
-
             $table->unsignedBigInteger('post_id');
             $table->unsignedBigInteger('categoria_id');
-           
-           
-            $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
-            $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('cascade');
+
+            $table->foreign('post_id')->references('id')->on('posts');
+            $table->foreign('categoria_id')->references('id')->on('categorias');
         });
     }
 

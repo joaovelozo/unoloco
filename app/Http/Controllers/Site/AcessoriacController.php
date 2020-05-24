@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Categoria;
 
 class AcessoriacController extends Controller
 {
@@ -12,9 +13,11 @@ class AcessoriacController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Categoria $categoria)
     {
-        return view('site.suport.index');
+        $categorias = $categoria->all();
+
+        return view('site.suport.index', compact('categorias'));
     }
 
     /**

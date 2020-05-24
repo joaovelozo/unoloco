@@ -28,4 +28,10 @@ class Categoria extends Model
             ->generateSlugsFrom('name')
             ->saveSlugsTo('slug');
     }
+
+    public function posts()
+
+    {
+        return $this->hasMany(\App\Models\Post::class, 'post_id');
+    }
 }
