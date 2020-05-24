@@ -37,7 +37,7 @@ class Post extends Model
             'title' => "required|min:3|max:250, unique:posts,title,{$id}, id", 
             'url' => "required|min:3|max:100, unique:posts,url,{$id}, id",
             'description' => 'required|min:50|max:11000',
-            'categorias_id' => 'required',
+            'categoria_id' => 'required',
             'date' => 'required|date', 
             'hour' => 'required', 
             'image' =>"image",

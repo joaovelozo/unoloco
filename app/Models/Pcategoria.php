@@ -10,7 +10,7 @@ class Pcategoria extends Model
 {
     use HasSlug;
 
-    protected $fillable = ['name', 'url', 'image','description', 'slug'];
+    protected $fillable = ['name', 'url', 'description', 'slug'];
 
     public function getSlugOptions() : SlugOptions
     {

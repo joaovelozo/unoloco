@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+
+use App\Http\Controllers\StandartController;
 use Illuminate\Http\Request;
 
-class MenuController extends Controller
+class MenuController extends StandartController
 {
     //
 }

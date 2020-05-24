@@ -17,8 +17,6 @@ class CreatePcategoriasTable extends Migration
             $table->bigIncrements('id');
             $table->string('name', 100);
             $table->string('url', 100);
-            $table->string('image', 200);
-            $table->text('description');
             $table->string('slug');
             $table->timestamps();
         });
