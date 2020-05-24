@@ -35,7 +35,7 @@ Route::resource('/posts', 'Admin\PostController');
   * Rotas Site
   ***************************************************************/
 
-Route::resource('/', 'Site\HomeController');
+Route::get('/', 'Site\HomeController@index');
 Route::resource('about', 'Site\AboutController');
 Route::get('contact', 'Site\ContactController@index');
 Route::resource('valuation', 'Site\ValuationController');
