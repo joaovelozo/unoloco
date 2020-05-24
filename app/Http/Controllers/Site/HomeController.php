@@ -12,30 +12,19 @@ use App\Mail\SendContact;
 class HomeController extends Controller
 {
 
-    protected $post;
-    public function __construct(Post $post)
-
-    {
-        $this->post = $post;
-    }
-
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Categoria $categoria)
-
- 
+    public function index()
     {
       
-         
-            $postsFeatured = $this->post
-            ->where('featured', true)
+            $postsFeatured = Post::where('featured', true)
             ->limit(3)
             ->get();
             
-            $categorias = $categoria->all();
+            $categorias = Categoria::all();
 
             return view('site.home.index', compact('postsFeatured', 'categorias'));
 
