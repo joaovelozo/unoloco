@@ -10,7 +10,7 @@
             </div>
             <div class="col-md-6 col-lg-6">
               <ul class="list-unstyled">
-                <li><a href="{{url('index')}}">Home</a></li>
+                <li><a href="{{url('/')}}">Home</a></li>
                 <li><a href="{{url('about')}}">Unoloco</a></li>
                 <li><a href="{{url('services')}}">Serviços</a></li>
                 <li><a href="{{url('contact')}}">Ajuda</a></li>
