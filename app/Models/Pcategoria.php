@@ -12,6 +12,7 @@ class Pcategoria extends Model
 
     protected $fillable = ['name', 'url', 'description', 'slug'];
 
+
     public function getSlugOptions() : SlugOptions
     {
         return SlugOptions::create()

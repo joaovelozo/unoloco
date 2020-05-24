@@ -15,6 +15,10 @@ Route::resource('/posts', 'Admin\PostController');
 
  Route::get('/dashboard', 'Admin\DashboardController@index')->name('dashboard');
 
+ Route::resource('/menu',  'Admin\MenuController');
+
+ Route::resource('/pages', 'Admin\PageController');
+
 });
 
  
