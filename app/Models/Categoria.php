@@ -12,6 +12,13 @@ class Categoria extends Model
 
     protected $fillable = ['name', 'url','description','image' ,'slug'];
 
+    public function getSlugOptions() : SlugOptions
+    {
+        return SlugOptions::create()
+            ->generateSlugsFrom('name')
+            ->saveSlugsTo('slug');
+    }
+
     public function rules($id = '')
     {
         return [
@@ -20,14 +27,9 @@ class Categoria extends Model
             'description' => "required|min:3|max:100",
             'image' => 'image',
         ];
+  
     }
-
-    public function getSlugOptions() : SlugOptions
-    {
-        return SlugOptions::create()
-            ->generateSlugsFrom('name')
-            ->saveSlugsTo('slug');
-    }
+  
 
     public function posts()
 

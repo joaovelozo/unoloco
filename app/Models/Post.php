@@ -31,6 +31,7 @@ class Post extends Model
             ->saveSlugsTo('slug');
     }
 
+
     public function rules($id = '')
     {
         return  [
