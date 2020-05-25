@@ -44,7 +44,7 @@ Route::resource('consult', 'Site\ConsultController');
 Route::resource('juridic', 'Site\AcessoriajController');
 Route::resource('suport', 'Site\AcessoriacController');
 Route::resource('blog', 'Site\BlogController');
-Route::get('/categoria/{url}', 'Site\HomeController@category');
+Route::get('/categoria/{url}', 'Site\BlogController@categoria');
 Route::post('contact', 'Site\HomeController@sendcontact')->name('contact');
 
 

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Categoria;
 use App\Models\Post;
 use Illuminate\Support\Str;
+
 class BlogController extends Controller
 {
 
@@ -98,5 +99,12 @@ class BlogController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function categoria(Categoria $categoria, $url)
+    {
+        $categoria = $categoria->where('url', $url)->get()->first();
+
+        dd($categoria);
     }
 }
