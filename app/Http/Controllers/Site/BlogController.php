@@ -105,6 +105,8 @@ class BlogController extends Controller
     {
         $categoria = $categoria->where('url', $url)->get()->first();
 
-        dd($categoria);
+        $posts = $categoria->posts()->get();
+
+        return view('site.category.category', compact('categorias', 'posts'));
     }
 }

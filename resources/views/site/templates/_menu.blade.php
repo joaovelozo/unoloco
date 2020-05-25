@@ -42,7 +42,7 @@
                   <a href="{{url('/')}}">Home</a>
                 <li><a href="{{url('about')}}">Unoloco</a></li>
                 <li class="has-children">
-                  <a href="{{url('services')}}">Serviços</a>
+                  <a href="{{url('/')}}">Serviços</a>
                   <ul class="dropdown arrow-top">
                       <li><a href="{{url('suport')}}">Assesoria Contábil</a></li>
                   <li><a href="{{url('juridic')}}">Assesoria Jurídica</a></li>
