@@ -52,7 +52,7 @@
           </a>
           <span class="text-muted d-block mb-1">{{$post->title}}</span>
           <h3><a href="#">{{str_limit($post->description, 100)}} </a></h3>
-          <p><a href={{url("/categorias/{$post->url}")}} class="btn btn-primary btn-lg rounded-0">Ver Completo</a></p>
+          <p><a href={{url("/categoria/{$post->url}")}} class="btn btn-primary btn-lg rounded-0">Ver Completo</a></p>
         @endforeach
         </div>
       

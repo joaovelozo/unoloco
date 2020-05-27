@@ -24,8 +24,14 @@ class CreatePostsTable extends Migration
             $table->boolean('featured')->default(false);
             $table->string('slug');
 
+            $table->bigInteger('categoria_id')->unsigned();
+            $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('cascade');
+
             $table->bigInteger('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
+          
+
 
           
 

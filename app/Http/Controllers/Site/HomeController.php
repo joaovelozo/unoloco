@@ -106,8 +106,10 @@ class HomeController extends Controller
             ->first();
 
             $posts = $categoria->posts()->get();
+            
+            $title = "{$categoria->title} - Unoloco";
 
-            return view('site.category.category', compact('categoria', 'posts'));
+            return view('site.category.category', compact('categoria', 'posts', 'title'));
 
         
     }
