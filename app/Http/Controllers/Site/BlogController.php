@@ -10,6 +10,8 @@ use Illuminate\Support\Str;
 
 class BlogController extends Controller
 {
+    private $post;
+    private $totalPage = 8;
 
     public function __construct(Post $post)
     {
@@ -30,7 +32,7 @@ class BlogController extends Controller
     {
         $categorias = $categoria->all();
 
-        $posts = $this->post->orderBy('date','DESC')->paginate(8);
+        $posts = $this->post->orderBy('date','DESC')->paginate($this->totalPage);
 
         return view('site.blog.index', compact('categorias', 'posts'));
     }
@@ -105,8 +107,19 @@ class BlogController extends Controller
     {
         $categoria = $categoria->where('url', $url)->get()->first();
 
-        $posts = $categoria->posts()->get();
+        $posts = $categoria->posts()->paginate($this->totalPage);
 
-        return view('site.category.category', compact('categorias', 'posts'));
+        $title = "{$categoria->name} - Unoloco";
+
+        return view('site.category.category', compact('categorias', 'posts', 'title'));
+    }
+
+    public function informativo($url)
+    {
+        $posts = $this->post->where('url', $url)->get()->first;
+        
+        $title = "{$posts->title} - Unoloco";
+
+        return view('site.informativos.informativo', compact('post', 'title'));
     }
 }

@@ -11,6 +11,7 @@ use App\Mail\SendContact;
 
 class HomeController extends Controller
 {
+   
 
     /**
      * Display a listing of the resource.
@@ -105,11 +106,11 @@ class HomeController extends Controller
             ->get()
             ->first();
 
-            $posts = $categoria->posts()->get();
+            $posts = $categoria->posts()->paginate();
             
-            $title = "{$categoria->title} - Unoloco";
+           
 
-            return view('site.category.category', compact('categoria', 'posts', 'title'));
+            return view('site.category.category', compact('categoria'));
 
         
     }

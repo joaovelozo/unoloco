@@ -54,7 +54,7 @@
                 <li class="has-children">
                   <a href="{{url('blog')}}">Informativos</a>
                   <ul class="dropdown arrow-top">
-                   @foreach ($categorias as $categoria)
+                   @foreach ($errors as $categoria)
                   <li><a href="{{url("/categoria/{$categoria->url}")}}">{{$categoria->name}}</a></li>
                   @endforeach
                   

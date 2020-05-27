@@ -19,6 +19,8 @@ Route::resource('/posts', 'Admin\PostController');
 
  Route::resource('/pages', 'Admin\PageController');
 
+
+
 });
 
  
@@ -45,6 +47,7 @@ Route::resource('juridic', 'Site\AcessoriajController');
 Route::resource('suport', 'Site\AcessoriacController');
 Route::resource('blog', 'Site\BlogController');
 Route::get('/categoria/{url}', 'Site\BlogController@categoria');
+Route::get('/informativos/{url}', 'Site\BlogController@informativo')->name('informativos');
 Route::post('contact', 'Site\HomeController@sendcontact')->name('contact');
 
 
