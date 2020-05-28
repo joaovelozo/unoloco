@@ -22,6 +22,13 @@
     <link rel="stylesheet" href="{{url('assets/site/css/aos.css')}}">
 
     <link rel="stylesheet" href="{{url('assets/site/css/style.css')}}">
+
+    <!-- Chat Inicio -->
+    
+    <script src="//code.jivosite.com/widget/PPmSlBNCRb" async></script>
+
+
+    <!-- Final Chat -->
     
   </head>
   <body>
@@ -197,7 +204,7 @@
     <div class="row mb-5">
       @foreach( $postsFeatured as $featured )
       <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 post-entry">
-      <a href="{{url("/posts/{$featured->url}")}}" class="d-block figure">
+      <a href="{{url("/informativos/{$featured->url}")}}" class="d-block figure">
           <img src="{{url("assets/uploads/posts/{$featured->image}")}}" alt="Image" class="img-fluid">
         </a>
         <span class="text-muted d-block mb-2">{{$featured->created_at}}</span>

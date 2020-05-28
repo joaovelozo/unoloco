@@ -1,5 +1,5 @@
  <!-- .site-mobile-menu -->
-    
+    @inject('categorias', '\App\Models\Categoria')
     
  <div class="site-navbar-wrap">
   <div class="site-navbar-top">
@@ -30,7 +30,7 @@
         <div class="col-2">
           <h1 class="mb-0 site-logo">
               <img src="{{url('assets/site/images/logow.png')}}" />
-              <a href="index.html"></a></h1>
+              <a href="{{url('/')}}"></a></h1>
         </div>
         <div class="col-10">
           <nav class="site-navigation text-right" role="navigation">
@@ -42,7 +42,7 @@
                   <a href="{{url('/')}}">Home</a>
                 <li><a href="{{url('about')}}">Unoloco</a></li>
                 <li class="has-children">
-                  <a href="{{url('services')}}">Serviços</a>
+                  <a href="{{url('/')}}">Serviços</a>
                   <ul class="dropdown arrow-top">
                       <li><a href="{{url('suport')}}">Assesoria Contábil</a></li>
                   <li><a href="{{url('juridic')}}">Assesoria Jurídica</a></li>
@@ -54,7 +54,7 @@
                 <li class="has-children">
                   <a href="{{url('blog')}}">Informativos</a>
                   <ul class="dropdown arrow-top">
-                   @foreach ($categorias as $categoria)
+                   @foreach ($categorias->all() as $categoria)
                   <li><a href="{{url("/categoria/{$categoria->url}")}}">{{$categoria->name}}</a></li>
                   @endforeach
                   

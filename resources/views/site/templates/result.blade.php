@@ -1,3 +1,4 @@
+@inject('posts', '\App\Models\Post')
 <!DOCTYPE html>
 <html lang="en">
   <head>

@@ -25,9 +25,9 @@ class HomeController extends Controller
             ->limit(3)
             ->get();
             
-            $categorias = Categoria::all();
+         
 
-            return view('site.home.index', compact('postsFeatured', 'categorias'));
+            return view('site.home.index', compact('postsFeatured'));
 
   
     }

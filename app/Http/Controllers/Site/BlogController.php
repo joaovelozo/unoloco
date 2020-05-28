@@ -28,13 +28,13 @@ class BlogController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Categoria $categoria)
+    public function index()
     {
-        $categorias = $categoria->all();
+     
 
         $posts = $this->post->orderBy('date','DESC')->paginate($this->totalPage);
 
-        return view('site.blog.index', compact('categorias', 'posts'));
+        return view('site.blog.index', compact( 'posts'));
     }
 
     /**
@@ -105,21 +105,22 @@ class BlogController extends Controller
 
     public function categoria(Categoria $categoria, $url)
     {
-        $categoria = $categoria->where('url', $url)->get()->first();
+        $categorias = $categoria->where('url', $url)->get()->first();
 
-        $posts = $categoria->post()->paginate($this->totalPage);
+        $post = $categoria->post()->paginate($this->totalPage);
 
         $title = "{$categoria->name} - Unoloco";
 
-        return view('site.category.category', compact('categorias', 'posts', 'title'));
+        return view('site.category.category', compact('categorias', 'post', 'title', 'url'));
     }
 
     public function informativo($url)
     {
-        $posts = $this->post->where('url', $url)->get()->first;
         
-        $title = "{$posts->title} - Unoloco";
+        $post = $this->post->where('url', $url)->get()->first;
+        
+        $title = "{$post->title} - Unoloco";
 
-        return view('site.informativos.informativo', compact('posts', 'title'));
+        return view('site.informativos.informativo', compact('post', 'title'));
     }
 }

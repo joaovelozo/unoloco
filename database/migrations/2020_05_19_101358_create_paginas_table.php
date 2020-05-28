@@ -21,6 +21,7 @@ class CreatePaginasTable extends Migration
             $table->string('image', 250);
             $table->text('description');
             $table->string('slug');
+
             $table->timestamps();
         });
     }

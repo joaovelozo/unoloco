@@ -367,7 +367,21 @@ return [
                 ],
             ],
         ],
+        [
+            'name' => 'Quill Text Editor',
+            'active' => true,
+            'files' => [
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdn.quilljs.com/1.3.6/quill.js',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => false,
+                    'location' => '//cdn.quilljs.com/1.3.6/quill.snow.css',
+                ],
+            ],
+        ],
     ],
 ];
-
-

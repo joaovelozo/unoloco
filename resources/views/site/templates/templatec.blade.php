@@ -22,6 +22,14 @@
     <link rel="stylesheet" href="{{url('assets/site/css/aos.css')}}">
 
     <link rel="stylesheet" href="{{url('assets/site/css/style.css')}}">
+
+        <!-- Chat Inicio -->
+    
+        <script src="//code.jivosite.com/widget/PPmSlBNCRb" async></script>
+
+
+        <!-- Final Chat -->
+        
     
   </head>
   <body>
@@ -65,7 +73,7 @@
         <p></p>
       
         <hr>
-        <form action="#" class="p-5 bg-white">
+        <form action="{{route('contact')}}" method="POST" class="p-5 bg-white">
 
           <div class="row form-group">
             <div class="col-md-12 mb-3 mb-md-0">

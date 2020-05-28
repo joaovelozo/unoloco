@@ -53,11 +53,14 @@
     {!! Form::close() !!}
 </div>
 
+@section('js')
+
+<script>
+  var quill = new Quill('textarea', {
+    theme: 'snow'
+  });
+</script>
+@endsection
 @stop
-
-
-<script src="//cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
-<script>tinymce.init({selector:'textarea'});</script>
-
 
 
