@@ -31,7 +31,7 @@ class Categoria extends Model
     }
   
 
-    public function post()
+    public function posts()
 
     {
         return $this->hasMany(\App\Models\Post::class);

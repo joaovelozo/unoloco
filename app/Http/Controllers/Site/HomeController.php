@@ -11,6 +11,12 @@ use App\Mail\SendContact;
 
 class HomeController extends Controller
 {
+    private $post;
+    private $totalPage = 3;
+    public function __construct(Post $post)
+    {
+        $this->post = $post;
+    }
    
 
     /**
@@ -24,10 +30,12 @@ class HomeController extends Controller
             $postsFeatured = Post::where('featured', true)
             ->limit(3)
             ->get();
+
+            $post = $this->post->orderBy('date', 'ASC')->paginate($this->totalPage);
             
          
 
-            return view('site.home.index', compact('postsFeatured'));
+            return view('site.home.index', compact('postsFeatured', 'posts'));
 
   
     }
@@ -106,11 +114,11 @@ class HomeController extends Controller
             ->get()
             ->first();
 
-            $posts = $categoria->posts()->paginate();
+            $posts = $categoria->posts()->paginate($this->totalPage);
             
            
 
-            return view('site.category.category', compact('categoria'));
+            return view('site.category.category', compact('categoria', 'posts'));
 
         
     }

@@ -107,17 +107,17 @@ class BlogController extends Controller
     {
         $categorias = $categoria->where('url', $url)->get()->first();
 
-        $post = $categoria->post()->paginate($this->totalPage);
+        $posts = $categoria->posts()->paginate($this->totalPage);
 
         $title = "{$categoria->name} - Unoloco";
 
-        return view('site.category.category', compact('categorias', 'post', 'title', 'url'));
+        return view('site.category.category', compact('categorias', 'posts', 'title'));
     }
 
     public function informativo($url)
     {
         
-        $post = $this->post->where('url', $url)->get()->first;
+        $post = $this->post->where('url', $url)->get()->first();
         
         $title = "{$post->title} - Unoloco";
 

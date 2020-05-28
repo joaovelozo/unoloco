@@ -1,4 +1,5 @@
-@inject('posts', 'App\Models\Post')
+@inject('posts', '\App\Models\Post')
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -49,21 +50,21 @@
 
           @foreach($posts as $post)
           <a href="#" class="d-block figure">
-            <img src="{{url("assets/uploads/posts/{$post->image}")}}" alt="Image" class="img-fluid">
+          <img src="{{url("assets/uploads/posts/{$post->image}")}}" alt="{{$post->title}}" class="img-fluid">
           </a>
           <span class="text-muted d-block mb-1">{{$post->title}}</span>
           <h3><a href="#">{{str_limit($post->description, 100)}} </a></h3>
           <p><a href={{url("/categoria/{$post->url}")}} class="btn btn-primary btn-lg rounded-0">Ver Completo</a></p>
-        @endforeach
-        </div>
       
+        </div>
+        @endforeach
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-12 text-center">
           <div class="site-block-27">
-           {!! $posts->links() !!}
+           {!! $post->links() !!}
           </div>
         </div>
       </div>

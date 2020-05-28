@@ -24,14 +24,6 @@ Route::resource('/posts', 'Admin\PostController');
 });
 
  
- 
- 
-
- 
-
-
-
-
 
  /****************************************************************
   * Rotas Site
@@ -47,7 +39,7 @@ Route::resource('juridic', 'Site\AcessoriajController');
 Route::resource('suport', 'Site\AcessoriacController');
 Route::resource('blog', 'Site\BlogController');
 Route::get('/categoria/{url}', 'Site\BlogController@categoria');
-Route::get('/informativos/{url}', 'Site\BlogController@informativo')->name('informativos');
+Route::get('/informativo/{url}', 'Site\BlogController@informativo')->name('informativos');
 Route::post('contact', 'Site\HomeController@sendcontact')->name('contact');
 
 
