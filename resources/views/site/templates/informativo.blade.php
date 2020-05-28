@@ -48,8 +48,8 @@
 
                     <div class="blog-post">
                         <img src="{{url("assets/uploads/posts/{$posts->image}")}}" />
-                      <h2 class="blog-post-title">Sample blog post</h2>
-                      <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
+                      <h2 class="blog-post-title">{{$posts->title}}</h2>
+                      <p class="blog-post-meta">{{$posts->created_at}} <a href="#">Mark</a></p>
               
                       <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
                       <hr>

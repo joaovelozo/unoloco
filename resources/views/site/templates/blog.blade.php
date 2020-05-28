@@ -48,6 +48,7 @@
 
           @foreach($posts as $post)
           <a href="#" class="d-block figure">
+          </a>
             <img src="{{url("assets/uploads/posts/{$post->image}")}}" alt="Image" class="img-fluid">
           </a>
           <span class="text-muted d-block mb-1">{{$post->title}}</span>
@@ -55,9 +56,7 @@
           <p><a href={{url("/categoria/{$post->url}")}} class="btn btn-primary btn-lg rounded-0">Ver Completo</a></p>
         @endforeach
         </div>
-      
-        </div>
-      </div>
+ 
 
       <div class="row">
         <div class="col-md-12 text-center">
@@ -66,12 +65,14 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    
 
 
       @yield('content')
 
+  </div>
+    </div>
+  </div>
   </div>
      
   

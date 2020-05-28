@@ -107,7 +107,7 @@ class BlogController extends Controller
     {
         $categoria = $categoria->where('url', $url)->get()->first();
 
-        $posts = $categoria->posts()->paginate($this->totalPage);
+        $posts = $categoria->post()->paginate($this->totalPage);
 
         $title = "{$categoria->name} - Unoloco";
 
@@ -120,6 +120,6 @@ class BlogController extends Controller
         
         $title = "{$posts->title} - Unoloco";
 
-        return view('site.informativos.informativo', compact('post', 'title'));
+        return view('site.informativos.informativo', compact('posts', 'title'));
     }
 }
