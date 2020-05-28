@@ -8,7 +8,7 @@
       
         <h2 class="site-heading text-black mb-5">Fale  <strong>Conosco</strong></h2>
       
-        <form action="#" class="p-5 bg-white">
+        <form action="{{route('contact')}}" method="POST" class="p-5 bg-white">
 
           <div class="row form-group">
             <div class="col-md-12 mb-3 mb-md-0">
@@ -34,7 +34,7 @@
           <div class="row form-group">
             <div class="col-md-12">
               <label class="font-weight-bold" for="message">Mensagem</label> 
-              {!! Form::textarea('message', null, ['class' => 'form-control']) !!}
+              {!! Form::textarea('mensage', null, ['class' => 'form-control']) !!}
             </div>
           </div>
 
