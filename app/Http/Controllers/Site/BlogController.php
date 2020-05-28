@@ -30,97 +30,38 @@ class BlogController extends Controller
      */
     public function index()
     {
-     
 
         $posts = $this->post->orderBy('date','DESC')->paginate($this->totalPage);
 
         return view('site.blog.index', compact( 'posts'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function categoria($url)
     {
-        //
-    }
+        $categoria = Categoria::where('url', $url)->first();
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+        if($categoria) {
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+            $posts = $categoria->posts()->paginate($this->totalPage);
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
+            $title = "{$categoria->name} - Unoloco";
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
-
-    public function categoria(Categoria $categoria, $url)
-    {
-        $categorias = $categoria->where('url', $url)->get()->first();
-
-        $posts = $categoria->posts()->paginate($this->totalPage);
-
-        $title = "{$categoria->name} - Unoloco";
-
-        return view('site.category.category', compact('categorias', 'posts', 'title'));
+            return view('site.category.category', compact('categoria', 'posts', 'title'));
+        } else {
+            return redirect()->route('site.home');
+        }
     }
 
     public function informativo($url)
     {
-        
-        $post = $this->post->where('url', $url)->get()->first();
-        
-        $title = "{$post->title} - Unoloco";
+        $post = Post::where('url', $url)->first();
 
-        return view('site.informativos.informativo', compact('post', 'title'));
+        if($post) {
+            $title = "{$post->title} - Unoloco";
+
+            return view('site.informativos.informativo', compact('post', 'title'));
+        } else {
+            return redirect()->route('site.home');
+        }
     }
 }

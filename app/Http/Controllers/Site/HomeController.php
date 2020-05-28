@@ -13,11 +13,6 @@ class HomeController extends Controller
 {
     private $post;
     private $totalPage = 3;
-    public function __construct(Post $post)
-    {
-        $this->post = $post;
-    }
-   
 
     /**
      * Display a listing of the resource.
@@ -26,84 +21,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-      
-            $postsFeatured = Post::where('featured', true)
-            ->limit(3)
-            ->get();
 
-            $post = $this->post->orderBy('date', 'ASC')->paginate($this->totalPage);
-            
-         
+        $postsFeatured = Post::where('featured', true)
+        ->limit(3)
+        ->get();
 
-            return view('site.home.index', compact('postsFeatured', 'posts'));
+        $posts = Post::orderBy('date', 'ASC')->paginate($this->totalPage);
 
-  
-    }
+        return view('site.home.index', compact('postsFeatured', 'posts'));
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-      
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 
     public function category(Categoria $categoria, $url)
@@ -115,21 +41,22 @@ class HomeController extends Controller
             ->first();
 
             $posts = $categoria->posts()->paginate($this->totalPage);
-            
-           
+
+
 
             return view('site.category.category', compact('categoria', 'posts'));
 
-        
+
     }
 
     public function sendContact(Request $request)
 
     {
         $dataForm = $request->all();
+        //dd($dataForm);
 
-        $mail = Mail::send(new SendContact($dataForm));
+        Mail::send(new SendContact($dataForm));
 
-        dd($mail);
+        return redirect()->route('site.home')->with('mail', 'mail');
     }
 }

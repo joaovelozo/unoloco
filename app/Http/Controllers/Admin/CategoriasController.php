@@ -15,12 +15,9 @@ class CategoriasController extends StandartController
     protected $upload = ['name' =>  'image' , 'path' => 'categorias'];
     protected $route = 'categorias';
 
-
-    
-
     public function __construct(Categoria $categoria)
     {
-        $this->model =$categoria;
+        $this->model = $categoria;
     }
-    
+
 }

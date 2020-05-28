@@ -23,13 +23,13 @@ Route::resource('/posts', 'Admin\PostController');
 
 });
 
- 
+
 
  /****************************************************************
   * Rotas Site
   ***************************************************************/
 
-Route::get('/', 'Site\HomeController@index');
+Route::get('/', 'Site\HomeController@index')->name('site.home');
 Route::resource('about', 'Site\AboutController');
 Route::get('contact', 'Site\ContactController@index');
 Route::resource('valuation', 'Site\ValuationController');
