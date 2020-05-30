@@ -17,9 +17,9 @@
     </div>
     @endif
     @if( isset ($data) )
-    {!! Form::model ($data, ['route'=> ['posts.update', $data->id], 'class' =>'form-group', 'files'=>true, 'method' => 'PUT']) !!}
+    {!! Form::model ($data, ['route'=> ['pages.update', $data->id], 'class' =>'form-group', 'files'=>true, 'method' => 'PUT']) !!}
     @else
-    {!! Form::open(['route'=>'posts.store', 'class' =>'form-group', 'files'=>true]) !!}
+    {!! Form::open(['route'=>'pages.store', 'class' =>'form-group', 'files'=>true]) !!}
     @endif
 
     <div class="form-group">

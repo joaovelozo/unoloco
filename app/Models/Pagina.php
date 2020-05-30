@@ -12,7 +12,8 @@ class Pagina extends Model
 
 
     protected $fillable = [
-        'name', 
+        'url', 
+        'subtitle',
         'title',
         'banner', 
         'image',  
@@ -29,9 +30,9 @@ class Pagina extends Model
     public function rules($id = '')
     {
         return  [
-            'title' => "required|min:3|max:250, unique:posts,title,{$id}, id", 
-            'url' => "required|min:3|max:100, unique:posts,url,{$id}, id",
-            'name' => 'required|min:5|max:100',
+            'title' => "required|min:3|max:250",
+            'subtitle' => 'required|min:3|max:100',
+            'url' => "required|min:3|max:100, unique:paginas,url,{$id}, id",
             'description' => 'required|min:50|max:11000',
             'pcategoria_id' => 'required',
             'banner'=>"image",

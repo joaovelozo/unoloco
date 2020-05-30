@@ -15,7 +15,8 @@ class CreatePaginasTable extends Migration
     {
         Schema::create('paginas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name', 100);
+            $table->string('url', 100);
+            $table->string('subtitle', 50);
             $table->string('title', 250);
             $table->string('banner', 250);
             $table->string('image', 250);
