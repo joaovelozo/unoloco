@@ -18,7 +18,6 @@ class PostController extends StandartController
     protected $upload = ['name' => 'image', 'path' => 'posts'];
 
 
-    
 
     public function __construct(Post $post)
     {
@@ -39,7 +38,7 @@ class PostController extends StandartController
         $title = "Editar {$this->name}: {$data->name}";
 
         $categorias = Categoria::get()->pluck('name', 'id');
-       
+
 
         return view("{$this->view}.create-edit", compact('data', 'title', 'categorias'));
     }
@@ -67,7 +66,7 @@ class PostController extends StandartController
 
             $nameFile = uniqid(date('YmdHis')) . '.' . $image->getClientOriginalExtension();
 
-           
+
                 $upload = $image->storeAs($this->upload['path'], $nameFile);
 
                 if($upload)
@@ -80,7 +79,7 @@ class PostController extends StandartController
                             ->whithInput();
         }
 
-  
+
 
         // Cadastra o novo usuário
         $insert = $this->model->create($dataForm);
@@ -120,5 +119,5 @@ class PostController extends StandartController
                         ->withErrors(['errors'=>'Falha ao Cadastrar'])
                         ->withInput();
     }
-    
+
 }

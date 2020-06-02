@@ -40,6 +40,7 @@ Route::resource('suport', 'Site\AcessoriacController');
 Route::resource('blog', 'Site\BlogController');
 Route::get('/categoria/{url}', 'Site\BlogController@categoria');
 Route::get('/informativo/{url}', 'Site\BlogController@informativo')->name('informativos');
+Route::get('/servicos/{url}', 'Site\HomeController@services')->name('servicos');
 Route::post('contact', 'Site\HomeController@sendcontact')->name('contact');
 
 

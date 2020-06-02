@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
+use App\Models\Pagina;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Categoria;
@@ -46,6 +47,19 @@ class HomeController extends Controller
 
             return view('site.category.category', compact('categoria', 'posts'));
 
+
+    }
+
+    public function services($url)
+    {
+        $page =  Pagina::where('url', $url)->first();
+
+        if($page) {
+
+            return view('site.servicos.index', compact('page'));
+        } else {
+            redirect()->route('site.home');
+        }
 
     }
 

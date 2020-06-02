@@ -26,24 +26,34 @@
     {!! Form::text('title', null, ['class'=>'form-control form-control-lg', 'placeholder' => 'Título:']) !!}
     </div>
 
-
     <div class="form-group">
-        <label>Selecione a Categoria</label>
-        {!! Form::select('pcategoria_id', $pcategorias, null, ['class'=>'form-control form-control-lg']) !!}
+    <label>Banner Destaque</label>
+    {!! Form::file('banner', ['class'=>'form-control form-control-lg']) !!}
     </div>
 
     <div class="form-group">
-    {!! Form::text('url', null, ['class'=>'form-control form-control-lg', 'placeholder' => 'URL:'])!!}
+    {!! Form::text('banner_text', null, ['class'=>'form-control form-control-lg', 'placeholder' => 'Texto Banner:']) !!}
     </div>
-    
+
+    <div class="form-group">
+    <label>Imagem Destaque</label>
+    {!! Form::file('image', ['class'=>'form-control form-control-lg']) !!}
+    </div>
+
+    <div class="form-group">
+    {!! Form::text('subtitle', null, ['class'=>'form-control form-control-lg', 'placeholder' => 'Subtítulo:']) !!}
+    </div>
+
     <div clas="form-group">
         {!! Form::textarea('description', null, ['class'=>'form-control form-control-lg', 'placeholder' => 'Descrição:'])!!}
     </div>
 
+
+
+
     <div class="form-group">
-        <label>Banner Destaque</label>
-        {!! Form::file('image', ['class'=>'form-control form-control-lg']) !!}
-        </div>
+    {!! Form::text('url', null, ['class'=>'form-control form-control-lg', 'placeholder' => 'URL:'])!!}
+    </div>
 
     <div class="form-group">
         <div class=text-right>

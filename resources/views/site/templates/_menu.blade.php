@@ -45,11 +45,9 @@
                                 <li class="has-children">
                                     <a href="{{url('/')}}">Serviços</a>
                                     <ul class="dropdown arrow-top">
-                                        <li><a href="{{url('suport')}}">Assesoria Contábil</a></li>
-                                        <li><a href="{{url('juridic')}}">Assesoria Jurídica</a></li>
-                                        <li><a href="{{url('consult')}}">Consultoria</a></li>
-                                        <li><a href="{{url('certified')}}">Certificação Digital</a></li>
-                                        <li><a href="{{url('valuation')}}">Valuation</a></li>
+                                        @foreach (\App\Models\Pagina::all() as $pagina)
+                                            <li><a href="{{url("/servicos/{$pagina->url}")}}">{{$pagina->title}}</a></li>
+                                        @endforeach
                                     </ul>
                                 </li>
                                 <li class="has-children">

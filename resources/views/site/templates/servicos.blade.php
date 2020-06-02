@@ -38,42 +38,13 @@
     </div>
 
     @include('site.templates._menu')
-    @include('site.templates.image4')
 
+    @include('site.templates.banner', ['banner' => $page->banner, 'text1' => $page->rest($page->banner_text), 'text2' => $page->last($page->banner_text)])
 
-
-
-     <!-- site-chamada -->
-    <div class="site-section about-section">
-      <div class="container">
-        <div class="row align-items-center mb-5 pb-5">
-          <div class="col-lg-7 img-years mb-5 mb-lg-0">
-            <span class="experience">
-              <span class="years">Valuation</span>
-              <span class="caption">Bussines</span>
-            </span>
-            <img src="{{url('assets/site/images/value.png')}}" alt="Image" class="img-fluid">
-          </div>
-          <div class="col-lg-4 ml-auto">
-            <span class="sub-title">Valuation</span>
-            <h3 class="mb-4">O Valor real.</h3>
-            <p class="mb-5">Valuation é o termo em inglês para "Avaliação de Empresas", "Valoração de Empresas" e "Arbitragem de Valor". Esta área de finanças estuda o processo de se avaliar o valor de determinado ativo, financeiro ou real. Avaliações podem ser feitas sobre os ativos ou sobre passivos. </p>
-
-          </div>
-        </div>
-
-
-      </div>
-    </div>
-    </div>
 
      <!-- end-site-chamada -->
 
-
-
       @yield('content')
-
-
 
 
 <!--Contact-->

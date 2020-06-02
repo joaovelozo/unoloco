@@ -58,8 +58,8 @@ class BlogController extends Controller
 
         if($post) {
             $title = "{$post->title} - Unoloco";
-
             return view('site.informativos.informativo', compact('post', 'title'));
+
         } else {
             return redirect()->route('site.home');
         }

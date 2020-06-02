@@ -5,7 +5,7 @@
 @section('content_header')
 
     <h3>Páginas/Serviços</h3>
-    
+
 @stop
 
 @section('content')
@@ -18,37 +18,37 @@
         Novo Página </a>
     </div>
 
-   
+
 <div class="box-body table-responsive no-padding">
     <table class="table table-hover">
     <thead>
         <tr>
-            
+
             <th>Nome</th>
             <th>URL</th>
             <th>Criado  </th>
             <th>Ações</th>
-            
+
         </tr>
     </thead>
-    
+
 <tbody>
     @foreach($data as $page)
     <tr>
-   
+
         <td>{{$page->title}}</td>
         <td>{{$page->url}}</td>
-        <td>{{$post->created_at}}</td>
+        <td>{{$page->created_at}}</td>
         <td>
             <div class="btn-group">
                 <a href="{{route('pages.edit', $page->id)}}" class="btn btn-sm btn-primary">EDITAR</a>
-                <a href="{{route('pagess.show', $page->id)}}" class="btn btn-sm btn-danger">VISUALIZAR</a>
-               
+                <a href="{{route('pages.show', $page->id)}}" class="btn btn-sm btn-danger">VISUALIZAR</a>
+
                 </div>
             </td>
-        
+
         </tr>
-           
+
                 @endforeach
     </tbody>
 </table>
@@ -63,4 +63,4 @@
 @endsection
 
 
-     
+

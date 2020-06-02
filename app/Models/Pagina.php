@@ -12,14 +12,14 @@ class Pagina extends Model
 
 
     protected $fillable = [
-        'url', 
+        'url',
         'subtitle',
         'title',
-        'banner', 
-        'image',  
-        'description', 
-        'slug', 
-        'pcategoria_id']  ;
+        'banner',
+        'banner_text',
+        'image',
+        'description',
+        'slug',]  ;
 
     public function getSlugOptions() : SlugOptions
     {
@@ -34,10 +34,34 @@ class Pagina extends Model
             'subtitle' => 'required|min:3|max:100',
             'url' => "required|min:3|max:100, unique:paginas,url,{$id}, id",
             'description' => 'required|min:50|max:11000',
-            'pcategoria_id' => 'required',
             'banner'=>"image",
             'image' =>"image",
-           
+
         ];
     }
+
+    public function last($text) {
+        $pieces = explode(' ', $text);
+        return array_pop($pieces);
+    }
+
+    public function firstletter($text) {
+        $pieces = explode(' ', $text);
+        return $pieces[0];
+    }
+
+    public function rest($text, $first = false) {
+        $pieces = explode(' ', $text);
+        if (count($pieces) > 1) {
+            if ($first) {
+                array_shift($pieces);
+            } else {
+                array_pop($pieces);
+            }
+            return implode(' ', $pieces);
+        } else {
+            return '';
+        }
+    }
+
 }

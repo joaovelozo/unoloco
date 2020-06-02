@@ -17,6 +17,7 @@ class CreatePaginasTable extends Migration
             $table->bigIncrements('id');
             $table->string('url', 100);
             $table->string('subtitle', 50);
+            $table->string('banner_text', 50);
             $table->string('title', 250);
             $table->string('banner', 250);
             $table->string('image', 250);
