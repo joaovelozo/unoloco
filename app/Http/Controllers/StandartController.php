@@ -46,6 +46,7 @@ class StandartController extends BaseController
     {
 
         //Validar Dados
+        //dd($request);
 
         $this->validate($request, $this->model->rules());
 
@@ -53,8 +54,6 @@ class StandartController extends BaseController
         //Pegar todos os dados
         $dataForm = $request->all();
 
-        dump($dataForm);
-        dd($this);
         //Imagem
         //Verificar se existe imagem
         if ( $this->upload && $request->hasFile($this->upload['name']) ) {
@@ -70,27 +69,6 @@ class StandartController extends BaseController
             if ($upload)
 
                 $dataForm[$this->upload['name']] = $nameFile;
-
-            else
-                return redirect()
-                    ->route("{$this->route}.create")
-                    ->withErrors(['errors' => 'Erro no Upload'])
-                    ->whithInput();
-        }
-
-        if ( $this->upload2 && $request->hasFile($this->upload2['name']) ) {
-
-            //Pegar Imagem
-            $image = $request->file($this->upload2['name']);
-
-            //Definiro nome da imagem
-            $nameFile = uniqid(date('YmdHis')) . '.' . $image->getClientOriginalExtension();
-
-            $upload = $image->storeAs($this->upload2['path'], $nameFile);
-
-            if ($upload)
-
-                $dataForm[$this->upload2['name']] = $nameFile;
 
             else
                 return redirect()

@@ -10,7 +10,7 @@ class Categoria extends Model
 {
     use HasSlug;
 
-    protected $fillable = ['name', 'url','description','image' ,'slug'];
+    protected $fillable = ['name', 'url','description', 'image' ,'slug'];
 
     public function getSlugOptions() : SlugOptions
     {
@@ -23,13 +23,13 @@ class Categoria extends Model
     {
         return [
             'name' => 'required|min:3|max:100',
-            'url' => "required|min:3|max:100|unique:categorias,url,{$id},id",
+            'url' => "required|min:3|max:100|unique:categorias,url",
             'description' => "required|min:3|max:100",
             'image' => 'image',
         ];
-  
+
     }
-  
+
 
     public function posts()
 
