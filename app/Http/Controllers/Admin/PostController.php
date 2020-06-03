@@ -107,7 +107,7 @@ class PostController extends StandartController
         $dataForm['featured'] = isset ( $dataForm['featured'] ) ? true : false;
 
         // Cadastra o novo usuário
-                 $update = $data->update($dataForm);
+         $update = $data->update($dataForm);
 
                 if($update)
                 return redirect()

@@ -91,7 +91,6 @@ class PageController extends StandartController
                     ->whithInput();
         }
 
-
         // Cadastra o novo usuário
         $insert = $this->model->create($dataForm);
 
@@ -114,8 +113,47 @@ class PageController extends StandartController
 
         $dataForm = $request->all();
 
-        $data = $this->model->find($id);
+        if ($this->upload && $request->hasFile($this->upload['name'])) {
 
+            $image = $request->file($this->upload['name']);
+
+            $nameFile = uniqid(date('YmdHis')).'.'.$image->getClientOriginalExtension();
+
+
+            $upload = $image->storeAs($this->upload['path'], $nameFile);
+
+            if ($upload) {
+                $dataForm[$this->upload['name']] = $nameFile;
+            } else {
+                return redirect()
+                    ->route("{$this->route}.create")
+                    ->withErrors(['errors' => 'Erro no Upload'])
+                    ->whithInput();
+            }
+        }
+
+        if ( $this->upload2 && $request->hasFile($this->upload2['name']) ) {
+
+            //Pegar Imagem
+            $image = $request->file($this->upload2['name']);
+
+            //Definiro nome da imagem
+            $nameFile = uniqid(date('YmdHis')) . '.' . $image->getClientOriginalExtension();
+
+            $upload = $image->storeAs($this->upload2['path'], $nameFile);
+
+            if ($upload)
+
+                $dataForm[$this->upload2['name']] = $nameFile;
+
+            else
+                return redirect()
+                    ->route("{$this->route}.create")
+                    ->withErrors(['errors' => 'Erro no Upload'])
+                    ->whithInput();
+        }
+
+        $data = $this->model->find($id);
 
         // Cadastra o novo usuário
         $update = $data->update($dataForm);
