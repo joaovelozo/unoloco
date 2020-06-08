@@ -35,7 +35,7 @@ Route::get('contact', 'Site\ContactController@index');
 Route::resource('valuation', 'Site\ValuationController');
 Route::resource('certified', 'Site\CertificaController');
 Route::resource('consult', 'Site\ConsultController');
-Route::resource('juridic', 'Site\AcessoriajController');
+//Route::resource('juridic', 'Site\AcessoriajController');
 Route::resource('suport', 'Site\AcessoriacController');
 Route::resource('blog', 'Site\BlogController');
 Route::get('/categoria/{url}', 'Site\BlogController@categoria');

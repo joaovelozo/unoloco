@@ -215,11 +215,7 @@ return [
            
         ],
         ['header' => 'GERENCIAR PÁGINAS'],
-        [
-            'text' => 'MENU',
-            'url'  => 'admin/menu',
-            'icon' => 'fas fa-compass',
-        ],
+    
         [
             'text' => 'PÁGINAS',
             'url'  => 'admin/pages',
@@ -373,12 +369,12 @@ return [
             'files' => [
                 [
                     'type' => 'js',
-                    'asset' => false,
+                    'asset' => true,
                     'location' => '//cdn.quilljs.com/1.3.6/quill.js',
                 ],
                 [
                     'type' => 'css',
-                    'asset' => false,
+                    'asset' => true,
                     'location' => '//cdn.quilljs.com/1.3.6/quill.snow.css',
                 ],
             ],

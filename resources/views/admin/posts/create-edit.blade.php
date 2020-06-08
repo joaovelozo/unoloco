@@ -4,6 +4,10 @@
 
 
 @section('content_header')
+
+
+
+
 <div class="title">
     <h3 class="title">Gestão de Informativos</h3>
 </div>
@@ -53,10 +57,11 @@
     </div>
     
     <div clas="form-group">
-        {!! Form::textarea('description', null, ['class'=>'form-control form-control-lg', 'placeholder' => 'Descrição:'])!!}
+        {!! Form::textarea('description', null, ['id'=>'textarea', 'class'=>'form-control form-control-lg', 'placeholder' => 'Descrição:'])!!}
     </div>
 
     <div class="form-group">
+        <label>Imagem</label>
         {!! Form::file('image', ['class'=>'form-control form-control-lg']) !!}
         </div>
 
@@ -68,14 +73,6 @@
     {!! Form::close() !!}
 </div>
 
-@section('js')
-
-<script>
-  var quill = new Quill('textarea', {
-    theme: 'snow'
-  });
-</script>
-@endsection
 @stop
 
 

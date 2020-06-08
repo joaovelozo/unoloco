@@ -9,7 +9,7 @@
                 <div class="blog-post">
                     <img src="{{url("assets/uploads/posts/{$post->image}")}}"/>
                     <h2 class="blog-post-title">{{$post->title}}</h2>
-                    <p class="blog-post-meta">{{$post->created_at}} <a href="#">Mark</a></p>
+                    <p class="blog-post-meta">{{$post->created_at}} <a href="#"></a></p>
 
                     {!! $post->description !!}
                 </div><!-- /.blog-post -->
